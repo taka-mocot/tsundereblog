@@ -1,0 +1,47 @@
+<タイトル>Python 環境を構築する前に考えること
+
+■どのバージョンを選択する?
+
+Python Software Foundation(本家)のサイトでは、現在2.X系と3.X系のリリースバージョンがダウンロードできる。
+2.X系の最新は 2.7.13、3.X系の最新は3.7.0となっている。(2018/08/01時点)
+
+→ https://www.python.org/downloads/
+
+本家サイトのFQA(https://docs.python.org/3/faq/general.html#how-stable-is-python)では、2つのバージョンについて
+以下のように言及されています。
+
+"There are two recommended production-ready versions at this point in time, 
+because at the moment there are two branches of stable releases: 2.x and 3.x.
+Python 3.x may be less useful than 2.x, since currently there is more third party software available for Python 2 than for Python 3.
+Python 2 code will generally not run unchanged in Python 3."
+
+訳すと、
+
+「現時点では、2.x系と3.x系の安定版リリースの2つのブランチがあるので、2つの推奨バージョンが存在することになります。
+現在サードパティ製で利用可能なライブラリはPython 3よりもPython2の方が充実しているため、
+Python3.xは2.xよりも利用できない状況があるかもしれません。
+Python2のコードは一般的にPython3では変更なしに実行できないでしょう。」
+
+ちょっと情報が古いままなのかもしれません。本当の現時点ではPythonの主要と思えるライブラリはPython3に対応していますので
+実際問題として困ることは少ないと思います。
+ただ業務システム等でニッチなライブラリを使用している現場でPython3へのバージョンアップする場合は慎重に確認が必要でしょう。
+
+結局「どのバージョンを選択するの？」という問いに対する答えは、
+
+<b>これからPythonで開発する・学習するといった場合は Python3 一択です。</b>
+
+余程の理由がない限り、一から始める場合に Python2 を選択する理由はありません。
+
+■Python2系と3系の違いって何?
+
+細かい違いをツラツラ書き連ねるとすごい量になるので、興味のある方は私も参考にさせてもらった下記サイトで詳細は確認してみてください。
+
+→ 「Python2からPython3.0での変更点」https://qiita.com/CS_Toku/items/353fd4b0fd9ed17dc152
+
+見て頂くと分かるんですが、一番困るのが同じプログラムでも「エラーにならず」に「挙動だけ変わる」ものがあることですね。
+せめて実行時にエラーにでもなってくれれば、動かないんだなと気づきますが、シレッと挙動だけ変わってた場合は気づかずに
+不具合を含んだままとなってしまう可能性があります。
+
+■Pythonの開発環境を構築する前に
+
+さて、ここからが本題ではありますが、いざPythonの開発環境をを自分のマシンに導入
