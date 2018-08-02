@@ -1,57 +1,57 @@
-<�^�C�g��>Python �����\�z����O�ɍl���邱��
+<タイトル>Python 環境を構築する前に考えること
 
-���ǂ̃o�[�W������I������?
+■どのバージョンを選択する?
 
-Python Software Foundation(�{��)�̃T�C�g�ł́A����2.X�n��3.X�n�̃����[�X�o�[�W�������_�E�����[�h�ł���B
-2.X�n�̍ŐV�� 2.7.13�A3.X�n�̍ŐV��3.7.0�ƂȂ��Ă���B(2018/08/01���_)
+Python Software Foundation(本家)のサイトでは、現在2.X系と3.X系のリリースバージョンがダウンロードできる。
+2.X系の最新は 2.7.13、3.X系の最新は3.7.0となっている。(2018/08/01時点)
 
-�� https://www.python.org/downloads/
+→ https://www.python.org/downloads/
 
-�{�ƃT�C�g��FQA(https://docs.python.org/3/faq/general.html#how-stable-is-python)�ł́A2�̃o�[�W�����ɂ���
-�ȉ��̂悤�Ɍ��y����Ă��܂��B
+本家サイトのFQA(https://docs.python.org/3/faq/general.html#how-stable-is-python)では、2つのバージョンについて
+以下のように言及されています。
 
 "There are two recommended production-ready versions at this point in time, 
 because at the moment there are two branches of stable releases: 2.x and 3.x.
 Python 3.x may be less useful than 2.x, since currently there is more third party software available for Python 2 than for Python 3.
 Python 2 code will generally not run unchanged in Python 3."
 
-�󂷂ƁA
+訳すと、
 
-�u�����_�ł́A2.x�n��3.x�n�̈���Ń����[�X��2�̃u�����`������̂ŁA2�̐����o�[�W���������݂��邱�ƂɂȂ�܂��B
-���݃T�[�h�p�e�B���ŗ��p�\�ȃ��C�u������Python 3����Python2�̕����[�����Ă��邽�߁A
-Python3.x��2.x�������p�ł��Ȃ��󋵂����邩������܂���B
-Python2�̃R�[�h�͈�ʓI��Python3�ł͕ύX�Ȃ��Ɏ��s�ł��Ȃ��ł��傤�B�v
+「現時点では、2.x系と3.x系の安定版リリースの2つのブランチがあるので、2つの推奨バージョンが存在することになります。
+現在サードパティ製で利用可能なライブラリはPython 3よりもPython2の方が充実しているため、
+Python3.xは2.xよりも利用できない状況があるかもしれません。
+Python2のコードは一般的にPython3では変更なしに実行できないでしょう。」
 
-������Ə�񂪌Â��܂܂Ȃ̂�������܂���B�{���̌����_�ł�Python�̎�v�Ǝv���郉�C�u������Python3�ɑΉ����Ă��܂��̂�
-���ۖ��Ƃ��č��邱�Ƃ͏��Ȃ��Ǝv���܂��B
-�����Ɩ��V�X�e�����Ńj�b�`�ȃ��C�u�������g�p���Ă��錻���Python3�ւ̃o�[�W�����A�b�v����ꍇ�͐T�d�Ɋm�F���K�v�ł��傤�B
+ちょっと情報が古いままなのかもしれません。本当の現時点ではPythonの主要と思えるライブラリはPython3に対応していますので
+実際問題として困ることは少ないと思います。
+ただ業務システム等でニッチなライブラリを使用している現場でPython3へのバージョンアップする場合は慎重に確認が必要でしょう。
 
-���ǁu�ǂ̃o�[�W������I������́H�v�Ƃ����₢�ɑ΂��铚���́A
+結局「どのバージョンを選択するの？」という問いに対する答えは、
 
-<b>���ꂩ��Python�ŊJ������E�w�K����Ƃ������ꍇ�� Python3 ����ł��B</b>
+<b>これからPythonで開発する・学習するといった場合は Python3 一択です。</b>
 
-�]���̗��R���Ȃ�����A�ꂩ��n�߂�ꍇ�� Python2 ��I�����闝�R�͂���܂���B
+余程の理由がない限り、一から始める場合に Python2 を選択する理由はありません。
 
-��Python2�n��3�n�̈Ⴂ���ĉ�?
+■Python2系と3系の違いって何?
 
-�ׂ����Ⴂ���c���c�������A�˂�Ƃ������ʂɂȂ�̂ŁA�����̂�����͎����Q�l�ɂ����Ă���������L�T�C�g�ŏڍׂ͊m�F���Ă݂Ă��������B
+細かい違いをツラツラ書き連ねるとすごい量になるので、興味のある方は私も参考にさせてもらった下記サイトで詳細は確認してみてください。
 
-�� �uPython2����Python3.0�ł̕ύX�_�vhttps://qiita.com/CS_Toku/items/353fd4b0fd9ed17dc152
+→ 「Python2からPython3.0での変更点」https://qiita.com/CS_Toku/items/353fd4b0fd9ed17dc152
 
-���Ē����ƕ������ł����A��ԍ���̂������v���O�����ł��u�G���[�ɂȂ炸�v�Ɂu���������ς��v���̂����邱�Ƃł��ˁB
-���߂Ď��s���ɃG���[�ɂł��Ȃ��Ă����΁A�����Ȃ��񂾂ȂƋC�Â��܂����A�V���b�Ƌ��������ς���Ă��ꍇ�͋C�Â�����
-�s����܂񂾂܂܂ƂȂ��Ă��܂��\��������܂��B
+見て頂くと分かるんですが、一番困るのが同じプログラムでも「エラーにならず」に「挙動だけ変わる」ものがあることですね。
+せめて実行時にエラーにでもなってくれれば、動かないんだなと気づきますが、シレッと挙動だけ変わってた場合は気づかずに
+不具合を含んだままとなってしまう可能性があります。
 
-��Python�̊J�������\�z����O��
+■Pythonの開発環境を構築する前に
 
-���āA�������炪�{��ł͂���܂����A����Python�̊J�������������̃}�V���ɓ�������ۂ́A����ǂ̂悤�Ȋ��Ǘ��c�[����
-���p���Ă������ŏ��Ɍ��߂�K�v������܂��B
+さて、ここからが本題ではありますが、いざPythonの開発環境をを自分のマシンに導入する際は、今後どのような環境管理ツールを
+利用していくか最初に決める必要があります。
 
-���͓����A���Ђ�l�b�g�̏��Ō����邪�܂܊��\�z���s�������ߍ����ڂɂ����܂����B(��)
+私は当初、書籍やネットの情報で言われるがまま環境構築を行ったため酷い目にあいました。(笑)
 
-���݁APython �̊��Ǘ��͈ȉ��̃c�[�����嗬�ł��B
-���ꂼ������ɗ��p�ړI���Ⴂ�܂������Python�̕����̃o�[�W�����Ǘ��⃉�C�u�����p�b�P�[�W�̊�(���z��)��؂�ւ���
-�ړI�ŗ��p���܂��B
+現在、Python の環境管理は以下のツールが主流です。
+それぞれ微妙に利用目的が違いますが主にPythonの複数のバージョン管理やライブラリパッケージの環境(仮想環境)を切り替える
+目的で利用します。
 
 * virtualenv
 * pyenv
@@ -59,29 +59,29 @@ Python2�̃R�[�h�͈�ʓI��Python3�ł͕ύX�Ȃ��Ɏ��s�ł��Ȃ��ł��傤�B�v
 * pipenv
 * Anaconda
 
-���_���炷��ƁA������肽���̂́uPython�ŋ@�B�w�K�I�v�Ƃ������ƂŃf�[�^�T�C�G���X�����ɉȊw�Z�p�v�Z�Ȃǂ̃��W���[����c�[����
-�p�b�P�[�W�ɂȂ��� Anaconda �𓱓����錈�ӂ����܂����I
+結論からすると、私がやりたいのは「Pythonで機械学習！」ということでデータサイエンス向けに科学技術計算などのモジュールやツールが
+パッケージになった Anaconda を導入する決意をしました！
 
-�e�c�[���̏ڍׂ⃁���b�g�E�f�����b�g�ɂ��Ă͉��L�̃T�C�g���ǂ��܂Ƃ߂��Ă�̂ŁA
-���ɋ@�B�w�K��f�[�^�T�C�G���X�Ɋւ�炸Python���w�K���������͈�ǂ���邱�Ƃ������߂��܂��B
+各ツールの詳細やメリット・デメリットについては下記のサイトが良くまとめられてるので、
+特に機械学習やデータサイエンスに関わらずPythonを学習したい方は一読されることをお勧めします。
 
-�� �uPython�̊��Ǘ��c�[���ǂ������v(http://www.zopfco.de/entry/2017/04/03/233811)
+→ 「Pythonの環境管理ツール良し悪し」(http://www.zopfco.de/entry/2017/04/03/233811)
 
-���܂Ƃ�
+■まとめ
 
-���͍ŏ��Ă��Ɓ[�ɍJ�̏����Q�l�ɈӖ����������Ȃ��܂�Python�̊J�������\�z�������ʁA�����Ȏ��Ԃ�
-���̃g���u���Ώ��ɔ�₵�܂����B
+私は最初てきとーに巷の情報を参考に意味も理解しないままPythonの開発環境を構築した結果、相当な時間を
+そのトラブル対処に費やしました。
 
-���Ȃ��Ƃ��{�L���ŏ��������Ƃ����O�Ɍ������ė������Ă��瓱�����Ă�������Ƃ悩�����̂ɂƂ̌�����珑���Ă܂�(��)
+少なくとも本記事で書いたことを事前に検討して理解してから導入してたらもっとよかったのにとの後悔から書いてます(笑)
 
-��ԍ������̂� Anaconda �� conda �R�}���h�� pip �R�}���h�����݂��ăp�b�P�[�W�C���X�g�[���Ƃ����Ă��̂ŁA
-�C���X�g�[�������̂� conda ���œ����Ȃ��Ƃ��ˑ��֌W�Ƃ����X�p�Q�b�e�B�ɂȂ������Ƃł��B
+一番困ったのは Anaconda の conda コマンドと pip コマンドを混在してパッケージインストールとかしてたので、
+インストールしたのに conda 環境で動かないとか依存関係とかがスパゲッティになったことです。
 
-* Python �̃o�[�W������ 3.x �n�B���ɖ�肪�Ȃ���΍ŐV�̃o�[�W�����𗘗p����B
-* ����̏��ɗ����ꂸ�������������ăf�[�^�T�C�G���X�ړI�Ɏg���Ȃ� Anaconda ���ǂ��B
+* Python のバージョンは 3.x 系。特に問題がなければ最新のバージョンを利用する。
+* 周りの情報に流されず正しく理解してデータサイエンス目的に使うなら Anaconda も良い。
 
-�ł́A����̂Ȃ� Python ���C�t�����y���݂��������I
+では、後悔のない Python ライフをお楽しみください！
 
 ========================
-<jupyter notebook �ŉ��z������ kernel �ɐ؂�ւ���>
+<jupyter notebook で仮想環境毎の kernel に切り替える>
 conda install nb_conda
