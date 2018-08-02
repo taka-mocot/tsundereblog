@@ -83,4 +83,5 @@ Python2のコードは一般的にPython3では変更なしに実行できないでしょう。」
 では、後悔のない Python ライフをお楽しみください！
 
 ========================
+<jupyter notebook で仮想環境毎の kernel に切り替える>
 conda install nb_conda
